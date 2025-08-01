@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOTIONTAPE – Creative Studio</title>
+  <meta name="description" content="MOTIONTAPE – The House of the Informal Lensman. A creative studio for photography, videography, and storytelling." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="shortcut icon" href="https://i.ibb.co/DfpFrfbF/Motion-Tape-Logo.jpg" type="image/x-icon">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    ::selection { background: #FFD700; color: #000; }
+    @keyframes slide { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .animate-slide { animation: slide 30s linear infinite; }
+    .fade-up { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { gold: '#FFD700', dark: '#0f0f0f' },
+          fontFamily: { inter: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-dark text-white font-inter">
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-gold">MOTIONTAPE</h1>
+      <nav class="hidden md:flex space-x-6 text-sm">
+        <a href="#Home" class="hover:text-gold transition">Home</a>
+        <a href="#about" class="hover:text-gold transition">About</a>
+        <a href="#services" class="hover:text-gold transition">Services</a>
+        <a href="#projects" class="hover:text-gold transition">Projects</a>
+        <a href="#team" class="hover:text-gold transition">Team</a>
+        <a href="#contact" class="hover:text-gold transition">Contact</a>
+      </nav>
+      <button id="mobileMenuToggle" class="md:hidden text-gold text-xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+      <a href="#Home" class="block py-2">Home</a>
+      <a href="#about" class="block py-2">About</a>
+      <a href="#services" class="block py-2">Services</a>
+      <a href="#projects" class="block py-2">Projects</a>
+      <a href="#team" class="block py-2">Team</a>
+      <a href="#contact" class="block py-2">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <!-- Add in <head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  .slider-container {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  .slider-track {
+    display: flex;
+    width: 400%;
+    animation: slide 20s infinite linear;
+  }
+
+  .slider-image {
+    flex: 1 0 100%;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+
+  @keyframes slide {
+    0% { transform: translateX(0%); }
+    25% { transform: translateX(0%); }
+    30% { transform: translateX(-100%); }
+    55% { transform: translateX(-100%); }
+    60% { transform: translateX(-200%); }
+    85% { transform: translateX(-200%); }
+    90% { transform: translateX(-300%); }
+    100% { transform: translateX(-300%); }
+  }
+
+  .slider-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(20, 20, 20, 0.8));
+    z-index: 1;
+  }
+
+  .slider-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .slider-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #FFD700;
+  }
+
+  .slider-content p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .slider-content h2 {
+      font-size: 2rem;
+    }
+    .slider-content p {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<!-- Hero Section with Background Slider -->
+<section class="slider-container fade-up" id="hero">
+  <div class="slider-track">
+    <div class="slider-image" style="background-image: url('https://via.placeholder.com/1920x1080?text=Visual+1');"></div>
+    <div class="slider-image" style="background-image: url('https://via.placeholder.com/1920x1080?text=Visual+2');"></div>
+    <div class="slider-image" style="background-image: url('https://via.placeholder.com/1920x1080?text=Visual+3');"></div>
+    <div class="slider-image" style="background-image: url('https://via.placeholder.com/1920x1080?text=Visual+4');"></div>
+  </div>
+
+  <div class="slider-overlay"></div>
+
+  <div class="slider-content">
+    <h2>Welcome to <span class="text-gold">MOTIONTAPE</span></h2>
+    <p>The Production House – Where storytelling meets motion</p>
+  </div>
+</section>
+
+
+  <!-- About -->
+ <section id="about" class="py-24 px-6 bg-black text-gray-100 fade-up">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+    <!-- Image Left -->
+    <div class="flex justify-center">
+      <img src="https://via.placeholder.com/600x400" alt="Our Team at Work" class="rounded-2xl shadow-xl w-full h-auto max-w-md md:max-w-full">
+    </div>
+
+    <!-- Text Right -->
+    <div>
+      <h3 class="text-4xl md:text-5xl font-bold text-gold mb-6 tracking-wide">About Us</h3>
+      <p class="text-lg md:text-xl text-gray-400 leading-relaxed">
+        We are a passionate team of storytellers blending art and technology to craft timeless visual experiences. Whether it’s candid moments or cinematic edits, we bring your vision to life with unmatched creativity.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Services -->
+  <section id="services" class="py-24 px-6 bg-gray-950 text-center fade-up">
+  <div class="max-w-6xl mx-auto">
+    <h3 class="text-4xl md:text-5xl font-bold text-gold mb-16 tracking-wide">Our Services</h3>
+    
+    <div class="grid gap-10 md:grid-cols-3">
+
+      <!-- Service Card 1: Photography -->
+      <div class="bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300">
+        <img src="https://i.ibb.co/BHPbLBNk/Into-stunning-visuals-that-tell-your-story-Book-your-sessions-For-Enquires-91-90721-9.jpg" alt="Photography" class="rounded-xl mb-4 w-full h-48 object-cover">
+        <h4 class="text-2xl font-semibold text-white mb-2">Photography</h4>
+        <p class="text-gray-400 leading-relaxed">
+          Portraits, events, product shoots & lifestyle photography crafted for depth and elegance.
+        </p>
+      </div>
+
+      <!-- Service Card 2: Videography -->
+      <div class="bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300">
+        <img src="https://i.ibb.co/KzLNT6Wp/With-stunning-details-and-cinematic-quality-For-Enquires-91-90721-91616-hello-motio.jpg" alt="Videography" class="rounded-xl mb-4 w-full h-48 object-cover">
+        <h4 class="text-2xl font-semibold text-white mb-2">Videography</h4>
+        <p class="text-gray-400 leading-relaxed">
+          Stylized video production for commercials, reels, music videos & brand stories.
+        </p>
+      </div>
+
+      <!-- Service Card 3: Creative Direction -->
+      <div class="bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300">
+        <img src="https://i.ibb.co/35rC3GPf/We-create-content-that-resonates-For-Enquires-91-90721-91616-hello-motiontape-in.jpg" alt="Social Media Content" class="rounded-xl mb-4 w-full h-48 object-cover">
+        <h4 class="text-2xl font-semibold text-white mb-2">Social Media Content</h4>
+        <p class="text-gray-400 leading-relaxed">
+         We Create engaging content for Your Business Social Media
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Projects -->
+ <style>
+  @keyframes slideCards {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-slide-cards {
+    animation: slideCards 40s linear infinite;
+  }
+</style>
+
+<section id="projects" class="py-20 px-6 text-center bg-black text-white">
+  <h3 class="text-3xl md:text-4xl font-semibold text-gold mb-12">Our Projects</h3>
+
+  <div class="overflow-hidden relative max-w-7xl mx-auto">
+    <div class="flex w-[200%] animate-slide-cards space-x-8">
+
+      <!-- Original Cards -->
+      <div class="bg-gray-900 rounded-xl p-4 w-[300px] shrink-0 shadow-lg">
+        <img src="https://via.placeholder.com/300x200" alt="Project 1" class="rounded-lg mb-3" />
+        <h4 class="text-xl font-semibold text-gold mb-1">Project One</h4>
+        <p class="text-sm text-gray-300">A short description of project one with impactful results and visuals.</p>
+      </div>
+
+      <div class="bg-gray-900 rounded-xl p-4 w-[300px] shrink-0 shadow-lg">
+        <img src="https://via.placeholder.com/300x200" alt="Project 2" class="rounded-lg mb-3" />
+        <h4 class="text-xl font-semibold text-gold mb-1">Project Two</h4>
+        <p class="text-sm text-gray-300">An overview of project two’s design, visuals, and storytelling focus.</p>
+      </div>
+
+      <div class="bg-gray-900 rounded-xl p-4 w-[300px] shrink-0 shadow-lg">
+        <img src="https://via.placeholder.com/300x200" alt="Project 3" class="rounded-lg mb-3" />
+        <h4 class="text-xl font-semibold text-gold mb-1">Project Three</h4>
+        <p class="text-sm text-gray-300">How project three brought cinematic narrative and motion together.</p>
+      </div>
+
+      <div class="bg-gray-900 rounded-xl p-4 w-[300px] shrink-0 shadow-lg">
+        <img src="https://via.placeholder.com/300x200" alt="Project 4" class="rounded-lg mb-3" />
+        <h4 class="text-xl font-semibold text-gold mb-1">Project Four</h4>
+        <p class="text-sm text-gray-300">A fast-paced urban visual identity project using handheld FPV shots.</p>
+      </div>
+
+      <!-- Duplicate for seamless scroll -->
+      <div class="bg-gray-900 rounded-xl p-4 w-[300px] shrink-0 shadow-lg">
+        <img src="https://via.placeholder.com/300x200" alt="Project 1" class="rounded-lg mb-3" />
+        <h4 class="text-xl font-semibold text-gold mb-1">Project One</h4>
+        <p class="text-sm text-gray-300">A short description of project one with impactful results and visuals.</p>
+      </div>
+
+      <div class="bg-gray-900 rounded-xl p-4 w-[300px] shrink-0 shadow-lg">
+        <img src="https://via.placeholder.com/300x200" alt="Project 2" class="rounded-lg mb-3" />
+        <h4 class="text-xl font-semibold text-gold mb-1">Project Two</h4>
+        <p class="text-sm text-gray-300">An overview of project two’s design, visuals, and storytelling focus.</p>
+      </div>
+
+      <div class="bg-gray-900 rounded-xl p-4 w-[300px] shrink-0 shadow-lg">
+        <img src="https://via.placeholder.com/300x200" alt="Project 3" class="rounded-lg mb-3" />
+        <h4 class="text-xl font-semibold text-gold mb-1">Project Three</h4>
+        <p class="text-sm text-gray-300">How project three brought cinematic narrative and motion together.</p>
+      </div>
+
+      <div class="bg-gray-900 rounded-xl p-4 w-[300px] shrink-0 shadow-lg">
+        <img src="https://via.placeholder.com/300x200" alt="Project 4" class="rounded-lg mb-3" />
+        <h4 class="text-xl font-semibold text-gold mb-1">Project Four</h4>
+        <p class="text-sm text-gray-300">A fast-paced urban visual identity project using handheld FPV shots.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Team -->
+  <section id="team" class="py-24 px-6 bg-gray-950 text-center fade-up">
+  <div class="max-w-6xl mx-auto">
+    <h3 class="text-4xl md:text-5xl font-bold text-gold mb-16 tracking-wide">Meet the Team</h3>
+
+    <div class="grid gap-12 md:grid-cols-3">
+
+      <!-- Team Member 1 -->
+      <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300">
+        <img src="https://via.placeholder.com/200" alt="Alex Roy" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md">
+        <h4 class="text-2xl font-semibold text-white mb-1">Alex Roy</h4>
+        <p class="text-gray-400 text-sm mb-4">Creative Director</p>
+        <div class="flex justify-center gap-4">
+          <a href="#" target="_blank"><i class="fab fa-linkedin text-gray-400 hover:text-gold text-xl"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram text-gray-400 hover:text-gold text-xl"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter text-gray-400 hover:text-gold text-xl"></i></a>
+        </div>
+      </div>
+
+      <!-- Team Member 2 -->
+      <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300">
+        <img src="https://via.placeholder.com/200" alt="Riya Mehra" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md">
+        <h4 class="text-2xl font-semibold text-white mb-1">Riya Mehra</h4>
+        <p class="text-gray-400 text-sm mb-4">Lead Cinematographer</p>
+        <div class="flex justify-center gap-4">
+          <a href="#" target="_blank"><i class="fab fa-linkedin text-gray-400 hover:text-gold text-xl"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram text-gray-400 hover:text-gold text-xl"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter text-gray-400 hover:text-gold text-xl"></i></a>
+        </div>
+      </div>
+
+      <!-- Team Member 3 -->
+      <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300">
+        <img src="https://via.placeholder.com/200" alt="Karan Das" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md">
+        <h4 class="text-2xl font-semibold text-white mb-1">Karan Das</h4>
+        <p class="text-gray-400 text-sm mb-4">Editor & Colorist</p>
+        <div class="flex justify-center gap-4">
+          <a href="#" target="_blank"><i class="fab fa-linkedin text-gray-400 hover:text-gold text-xl"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram text-gray-400 hover:text-gold text-xl"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter text-gray-400 hover:text-gold text-xl"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 px-6 fade-up bg-black text-white">
+  <h3 class="text-3xl font-semibold text-gold text-center mb-12">Contact Us</h3>
+
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 items-start justify-between">
+    
+    <!-- Google Map Column (Left) -->
+    <div class="w-full lg:w-1/2 rounded-xl overflow-hidden border-4 border-gold shadow-lg">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019759927762!2d-122.419415284681!3d37.77492977975937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858153b8d4c2e7%3A0x2c0aa56aa634b3f5!2sSan%20Francisco%20City%20Hall!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus"
+        width="100%" height="100%" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        class="w-full h-[500px] border-0"
+      ></iframe>
+    </div>
+
+    <!-- Form Column (Right) -->
+    <form class="space-y-4 w-full lg:w-1/2">
+      <input id="name" type="text" placeholder="Your Name" class="w-full p-3 bg-gray-800 border border-gold rounded" />
+      <input id="business" type="text" placeholder="Business Name" class="w-full p-3 bg-gray-800 border border-gold rounded" />
+      <input id="phone" type="tel" placeholder="Phone Number" class="w-full p-3 bg-gray-800 border border-gold rounded" />
+      <textarea id="requirements" placeholder="Your Requirements" class="w-full p-3 bg-gray-800 border border-gold rounded"></textarea>
+      <input id="location" type="text" placeholder="Your Location" class="w-full p-3 bg-gray-800 border border-gold rounded" />
+      <button type="button" onclick="sendToWhatsApp()" class="bg-gold text-black font-bold px-6 py-3 rounded hover:opacity-90 transition">
+        Send on WhatsApp
+      </button>
+    </form>
+
+  </div>
+</section>
+<section id="follow-us" class="py-16 px-6 bg-black text-white text-center">
+  <h3 class="text-3xl font-semibold text-gold mb-6">Follow Us</h3>
+
+  <div class="flex justify-center space-x-6 mt-4">
+    <!-- Facebook -->
+    <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="text-gold hover:text-white transition text-3xl">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="text-gold hover:text-white transition text-3xl">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- Twitter/X -->
+    <a href="https://twitter.com" target="_blank" aria-label="Twitter" class="text-gold hover:text-white transition text-3xl">
+      <i class="fab fa-x-twitter"></i>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="text-gold hover:text-white transition text-3xl">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://youtube.com" target="_blank" aria-label="YouTube" class="text-gold hover:text-white transition text-3xl">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer class="bg-black py-10">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+      <p>&copy; 2025 MOTIONTAPE. All rights reserved.</p>
+      <p a="href="lagger.com" class="hover:text-gold transition">Lagger Technologies</p>
+    </div>
+  </footer>
+
+  <script>
+    function sendToWhatsApp() {
+      const name = document.getElementById('name').value;
+      const business = document.getElementById('business').value;
+      const phone = document.getElementById('phone').value;
+      const requirements = document.getElementById('requirements').value;
+      const location = document.getElementById('location').value;
+      const message = `Name: ${name}%0ABusiness: ${business}%0APhone: ${phone}%0ARequirements: ${requirements}%0ALocation: ${location}`;
+      window.open(`https://wa.me/91987654321?text=${message}`, '_blank');
+    }
+
+    document.getElementById('mobileMenuToggle').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

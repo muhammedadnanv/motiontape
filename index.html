@@ -435,5 +435,12 @@
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
   </script>
+   <script>
+(function(){document.write('<div id="preloader" style="position:fixed;inset:0;z-index:9999;background:#000;color:#d4af37;display:flex;align-items:center;justify-content:center;flex-direction:column;font-family:sans-serif;font-size:24px;transition:opacity 0.5s ease"><div id="loader-text">Loading... 1</div></div>');let count=1,interval=setInterval(()=>{count++;if(count<=10){document.getElementById("loader-text").innerText="Loading... "+count}else{clearInterval(interval);let p=document.getElementById("preloader");p.style.opacity="0";setTimeout(()=>{p.style.display="none"},500)}},300);})();
+</script>
+<script>
+(function(){document.write('<div id="preloader" style="position:fixed;inset:0;z-index:9999;background:#000;color:#d4af37;display:flex;align-items:center;justify-content:center;flex-direction:column;font-family:sans-serif;font-size:24px;transition:opacity 0.5s ease"><div id="loader-text">Loading... 1</div></div>');let count=1,redirected=false;function go404(){if(!redirected){redirected=true;window.location.href="/404.html"}}if(!navigator.onLine){go404()}else{let timeout=setTimeout(go404,8000);let interval=setInterval(()=>{count++;if(count<=10){document.getElementById("loader-text").innerText="Loading... "+count}else{clearInterval(interval)}},300);window.addEventListener("load",()=>{clearTimeout(timeout);redirected=true;document.getElementById("preloader").style.opacity="0";setTimeout(()=>{document.getElementById("preloader").style.display="none"},500)})}})();
+</script>
 </body>
 </html>
+

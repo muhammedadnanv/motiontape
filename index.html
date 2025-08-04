@@ -38,9 +38,13 @@
 
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
 
-      <h1 class="text-2xl font-bold text-gold">MOTIONTAPE</h1>
+     <div class="flex items-center space-x-2">
+  <img src="https://i.ibb.co/ksytMD6m/Motion-Tape-Logo.jpg" alt="MOTIONTAPE Logo" class="w-10 h-10 object-contain">
+  <h1 class="text-2xl font-bold text-gold">MOTIONTAPE</h1>
+</div>
+
       <nav class="hidden md:flex space-x-6 text-sm">
-        <a href="#Home" class="hover:text-gold transition">Home</a>
+        <a href="#hero" class="hover:text-gold transition">Home</a>
         <a href="#about" class="hover:text-gold transition">About</a>
         <a href="#services" class="hover:text-gold transition">Services</a>
         <a href="#projects" class="hover:text-gold transition">Projects</a>
@@ -52,7 +56,7 @@
       </button>
     </div>
     <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
-      <a href="#Home" class="block py-2">Home</a>
+      <a href="#hero" class="block py-2">Home</a>
       <a href="#about" class="block py-2">About</a>
       <a href="#services" class="block py-2">Services</a>
       <a href="#projects" class="block py-2">Projects</a>
@@ -364,10 +368,11 @@
       <input id="name" type="text" placeholder="Your Name" class="w-full p-3 bg-gray-800 border border-gold rounded" />
       <input id="business" type="text" placeholder="Business Name" class="w-full p-3 bg-gray-800 border border-gold rounded" />
       <input id="phone" type="tel" placeholder="Phone Number" class="w-full p-3 bg-gray-800 border border-gold rounded" />
+      <input id="email" type="email" placeholder="Email Address" class="w-full p-3 bg-gray-800 border border-gold rounded" />
       <textarea id="requirements" placeholder="Your Requirements" class="w-full p-3 bg-gray-800 border border-gold rounded"></textarea>
       <input id="location" type="text" placeholder="Your Location" class="w-full p-3 bg-gray-800 border border-gold rounded" />
       <button type="button" onclick="sendToWhatsApp()" class="bg-gold text-black font-bold px-6 py-3 rounded hover:opacity-90 transition">
-        Send on WhatsApp
+        Summit
       </button>
     </form>
 
@@ -406,7 +411,7 @@
   <footer class="bg-black py-10">
     <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
       <p>&copy; 2025 MOTIONTAPE. All rights reserved.</p>
-      <p a="href="lagger.com" class="hover:text-gold transition">Lagger Technologies</p>
+      <p a="href="https://lagger.com" class="hover:text-gold transition">Lagger Technologies</p>
     </div>
   </footer>
 
@@ -415,9 +420,10 @@
       const name = document.getElementById('name').value;
       const business = document.getElementById('business').value;
       const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
       const requirements = document.getElementById('requirements').value;
       const location = document.getElementById('location').value;
-      const message = `Name: ${name}%0ABusiness: ${business}%0APhone: ${phone}%0ARequirements: ${requirements}%0ALocation: ${location}`;
+      const message = `Name: ${name}%0ABusiness: ${business}%0APhone: ${phone}%0AEmail: ${email}%0ARequirements: ${requirements}%0ALocation: ${location}`;
       window.open(`https://wa.me/919072191616?text=${message}`, '_blank');
     }
 

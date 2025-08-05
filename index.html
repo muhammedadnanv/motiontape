@@ -55,11 +55,17 @@
       <a href="#contact" class="hover:text-gold transition">Contact</a>
     </nav>
 
-    <!-- Mobile Menu Toggle -->
+    <!-- Mobile Menu Toggle --> 
     <button id="mobileMenuToggle" class="md:hidden text-gold text-xl">
       <i class="fas fa-bars"></i>
+      <script>
+        mobileMenuToggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      </script>
     </button>
   </div>
+  
 
   <!-- Mobile Nav Menu -->
   <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
@@ -224,7 +230,7 @@
 
       <!-- Service Card 1: Photography -->
       <div class="bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300">
-        <img src="https://i.ibb.co/BHPbLBNk/Into-stunning-visuals-that-tell-your-story-Book-your-sessions-For-Enquires-91-90721-9.jpg" alt="Photography" class="rounded-xl mb-4 w-full h-48 object-cover">
+        <img src="https://i.ibb.co/tTRcfYM6/Whats-App-Image-2025-08-05-at-16-12-44.jpg" alt="Photography" class="rounded-xl mb-4 w-full h-48 object-cover">
         <h4 class="text-2xl font-semibold text-white mb-2">Pre-Production</h4>
         <p class="text-gray-400 leading-relaxed">
           Concept refracting & story distillation and 
@@ -236,7 +242,7 @@
 
       <!-- Service Card 2: Videography -->
       <div class="bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300">
-        <img src="https://i.ibb.co/KzLNT6Wp/With-stunning-details-and-cinematic-quality-For-Enquires-91-90721-91616-hello-motio.jpg" alt="Videography" class="rounded-xl mb-4 w-full h-48 object-cover">
+        <img src="https://i.ibb.co/DDCBXgy6/Whats-App-Image-2025-08-05-at-16-12-44-1.jpg" alt="Videography" class="rounded-xl mb-4 w-full h-48 object-cover">
         <h4 class="text-2xl font-semibold text-white mb-2">Production</h4>
         <p class="text-gray-400 leading-relaxed">
            Cinematic capture with optical-spectrum bending  and On-set distortion & dynamic light design
@@ -245,7 +251,7 @@
 
       <!-- Service Card 3: Creative Direction -->
       <div class="bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300">
-        <img src="https://i.ibb.co/35rC3GPf/We-create-content-that-resonates-For-Enquires-91-90721-91616-hello-motiontape-in.jpg" alt="Social Media Content" class="rounded-xl mb-4 w-full h-48 object-cover">
+        <img src="https://i.ibb.co/21F3q9gs/Whats-App-Image-2025-08-05-at-16-12-44-2.jpg" alt="Social Media Content" class="rounded-xl mb-4 w-full h-48 object-cover">
         <h4 class="text-2xl font-semibold text-white mb-2">Post-Production</h4>
         <p class="text-gray-400 leading-relaxed">
          Twist, transform, reconstruct footage and  Sonic branding & spatial sound design
@@ -340,100 +346,114 @@
   </div>
 </section>
 
-
-
-  <!-- Team -->
-  <section id="team" class="py-24 px-6 bg-gray-950 text-center fade-up">
+<section id="team" class="relative bg-gray-950 py-24 px-6 text-center">
   <div class="max-w-6xl mx-auto">
-    <h3 class="text-4xl md:text-5xl font-bold text-gold mb-16 tracking-wide">Meet the Team</h3>
+    <h3 class="text-4xl md:text-5xl font-bold text-gold mb-16 tracking-wide">the crew</h3>
 
-    <div class="grid gap-12 md:grid-cols-3">
+    <!-- Scroll Buttons -->
+    <div class="relative">
+      <button
+        onclick="scrollTeam('left')"
+        class="hidden md:flex items-center justify-center absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gold text-black w-10 h-10 rounded-full shadow-md hover:bg-gold/90 transition"
+      >
+        ←
+      </button>
+      <button
+        onclick="scrollTeam('right')"
+        class="hidden md:flex items-center justify-center absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gold text-black w-10 h-10 rounded-full shadow-md hover:bg-gold/90 transition"
+      >
+        →
+      </button>
 
-     
-      <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300">
-        <img src="https://i.ibb.co/9Hj8NxfR/images.png" alt="Jenith Kachapally" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md">
-        <h4 class="text-2xl font-semibold text-white mb-1">Jenith Kachapally</h4>
-        <p class="text-gray-400 text-sm mb-4">Director</p>
-        <div class="flex justify-center gap-4">
-          <a href="https://www.imdb.com/name/nm10143417/" target="_blank"><i></i>Visit Profile</a>
+      <!-- Scrollable Cards -->
+      <div
+        id="team-scroll"
+        class="flex overflow-x-auto gap-6 snap-x snap-mandatory pb-4 px-2 scroll-smooth scrollbar-thin scrollbar-thumb-gold scrollbar-track-gray-800"
+      >
 
+        <!-- Member Card 1 -->
+        <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
+          <img src="https://i.ibb.co/cKLXTmYH/909090.png" alt="Jenith Kachapally" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
+          <h4 class="text-2xl font-semibold text-white mb-1">Jenith Kachapally</h4>
+          <p class="text-gray-400 text-sm mb-4">Director</p>
+          <a href="https://www.imdb.com/name/nm10143417/" target="_blank" class="text-gold hover:underline">Visit Profile</a>
         </div>
-      </div>
 
-      
-      <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300">
-        <img src="https://i.ibb.co/N2Sm830J/Anand-Menon.webp" alt="Riya Mehra" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md">
-        <h4 class="text-2xl font-semibold text-white mb-1">Anand Menon</h4>
-        <p class="text-gray-400 text-sm mb-4">Director</p>
-        <div class="flex justify-center gap-4">
-          <a href="https://www.imdb.com/name/nm11241276/" target="_blank"><i ></i>Visit Profile</a>
-
+        <!-- Member Card 2 -->
+        <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
+          <img src="https://i.ibb.co/rggkv1N/67890987654.jpg" alt="Anand Menon" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
+          <h4 class="text-2xl font-semibold text-white mb-1">Anand Menon</h4>
+          <p class="text-gray-400 text-sm mb-4">Director</p>
+          <a href="https://www.imdb.com/name/nm11241276/" target="_blank" class="text-gold hover:underline">Visit Profile</a>
         </div>
-      </div>
 
-      
-      <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300">
-        <img src="https://i.ibb.co/67cNqHQK/107109469-760795754663339-1274098285352410256-n.jpg" alt="Karan Das" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md">
-        <h4 class="text-2xl font-semibold text-white mb-1">Anu Muthedath</h4>
-        <p class="text-gray-400 text-sm mb-4">DOP</p>
-        <div class="flex justify-center gap-4">
-          <a href="https://www.imdb.com/name/nm6358536/" target="_blank"><i ></i>Visit Profile</a>
-<!--
+        <!-- Member Card 3 -->
+        <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
+          <img src="https://i.ibb.co/QRjBtM9/tgyutr.jpg" alt="Anu Muthedath" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
+          <h4 class="text-2xl font-semibold text-white mb-1">Anu Muthedath</h4>
+          <p class="text-gray-400 text-sm mb-4">DOP</p>
+          <a href="https://www.imdb.com/name/nm6358536/" target="_blank" class="text-gold hover:underline">Visit Profile</a>
         </div>
-      </div>
-       <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300">
-        <img src="https://i.ibb.co/PzcGF8y3/Rohith-VS.jpg" alt="Rohith VS" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md">
-        <h4 class="text-2xl font-semibold text-white mb-1">Rohith VS</h4>
-        <p class="text-gray-400 text-sm mb-4">Editor</p>
-        <div class="flex justify-center gap-4">
-          <a href="https://www.imdb.com/name/nm7909553/" target="_blank"><i ></i>Visit Profile</a>
 
+        <!-- Member Card 4 -->
+        <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
+          <img src="https://i.ibb.co/PzcGF8y3/Rohith-VS.jpg" alt="Rohith VS" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
+          <h4 class="text-2xl font-semibold text-white mb-1">Rohith VS</h4>
+          <p class="text-gray-400 text-sm mb-4">Editor</p>
+          <a href="https://www.imdb.com/name/nm7909553/" target="_blank" class="text-gold hover:underline">Visit Profile</a>
         </div>
-      </div>
-    
-      <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300">
-        <img src="https://i.ibb.co/pjWrPj0H/cinema-instamood-love.jpg" alt="Riya Mehra" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md">
-        <h4 class="text-2xl font-semibold text-white mb-1">Dhanya Balakrishnan</h4>
-        <p class="text-gray-400 text-sm mb-4">Costume</p>
-        <div class="flex justify-center gap-4">
-          <a href="https://www.imdb.com/name/nm4758002/" target="_blank"><i ></i>Visit Profile</a>
 
+        <!-- Member Card 5 -->
+        <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
+          <img src="https://i.ibb.co/pjWrPj0H/cinema-instamood-love.jpg" alt="Dhanya Balakrishnan" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
+          <h4 class="text-2xl font-semibold text-white mb-1">Dhanya Balakrishnan</h4>
+          <p class="text-gray-400 text-sm mb-4">Costume</p>
+          <a href="https://www.imdb.com/name/nm4758002/" target="_blank" class="text-gold hover:underline">Visit Profile</a>
         </div>
-      </div>
 
-       <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300">
-        <img src="https://i.ibb.co/GLS5pd3/Ronex-Xavier.jpg" alt="Riya Mehra" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md">
-        <h4 class="text-2xl font-semibold text-white mb-1">Ronex Xavier</h4>
-        <p class="text-gray-400 text-sm mb-4">Makeup</p>
-        <div class="flex justify-center gap-4">
-          <a href="https://www.imdb.com/name/nm5205291/" target="_blank"><i ></i>Visit Profile</a>
-
+        <!-- Member Card 6 -->
+        <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
+          <img src="https://i.ibb.co/GLS5pd3/Ronex-Xavier.jpg" alt="Ronex Xavier" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
+          <h4 class="text-2xl font-semibold text-white mb-1">Ronex Xavier</h4>
+          <p class="text-gray-400 text-sm mb-4">Makeup</p>
+          <a href="https://www.imdb.com/name/nm5205291/" target="_blank" class="text-gold hover:underline">Visit Profile</a>
         </div>
-      </div>
 
-      <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300">
-        <img src="https://i.ibb.co/JjkJ065G/Anees-Nadodi.jpg" alt="Riya Mehra" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md">
-        <h4 class="text-2xl font-semibold text-white mb-1">Anees Nadodi</h4>
-        <p class="text-gray-400 text-sm mb-4">Art</p>
-        <div class="flex justify-center gap-4">
-          <a href="https://www.imdb.com/name/nm9386233/" target="_blank"><i ></i>Visit Profile</a>
-
+        <!-- Member Card 7 -->
+        <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
+          <img src="https://i.ibb.co/JjkJ065G/Anees-Nadodi.jpg" alt="Anees Nadodi" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
+          <h4 class="text-2xl font-semibold text-white mb-1">Anees Nadodi</h4>
+          <p class="text-gray-400 text-sm mb-4">Art</p>
+          <a href="https://www.imdb.com/name/nm9386233/" target="_blank" class="text-gold hover:underline">Visit Profile</a>
         </div>
-      </div>
-   <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300">
-        <img src="https://i.ibb.co/0jFnS5pr/promice.png" alt="Riya Mehra" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md">
-        <h4 class="text-2xl font-semibold text-white mb-1">Promice Studios</h4>
-        <p class="text-gray-400 text-sm mb-4">VFX </p>
-        <div class="flex justify-center gap-4">
-          <a href="https://www.youtube.com/@promicevfx" target="_blank"><i ></i>Visit Profile</a>
 
+        <!-- Member Card 8 -->
+        <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
+          <img src="https://i.ibb.co/0jFnS5pr/promice.png" alt="Promice Studios" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
+          <h4 class="text-2xl font-semibold text-white mb-1">Promice Studios</h4>
+          <p class="text-gray-400 text-sm mb-4">VFX</p>
+          <a href="https://www.youtube.com/@promicevfx" target="_blank" class="text-gold hover:underline">Visit Profile</a>
         </div>
-      </div>
--->
 
+      </div>
     </div>
   </div>
+
+  <!-- Scroll JavaScript -->
+  <script>
+    function scrollTeam(direction) {
+      const container = document.getElementById("team-scroll");
+      const scrollAmount = 320;
+      container.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth"
+      });
+    }
+  </script>
 </section>
+
+
+ 
 
 
   <!-- Contact -->
@@ -542,5 +562,3 @@
   
 </body>
 </html>
-
-

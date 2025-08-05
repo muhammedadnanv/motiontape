@@ -34,36 +34,62 @@
 <body class="bg-dark text-white font-inter">
 
   <!-- Header -->
-  <header class="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50">
-
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-
-     <div class="flex items-center space-x-2">
-  <img src="https://i.ibb.co/HLCbwRHf/LOGO-08-10.png" alt="MOTIONTAPE Logo" class="w-12 h-12 object-contain">
-  
-</div>
-
-      <nav class="hidden md:flex space-x-6 text-sm">
-        <a href="#hero" class="hover:text-gold transition">Home</a>
-        <a href="#about" class="hover:text-gold transition">About</a>
-        <a href="#services" class="hover:text-gold transition">Services</a>
-        <a href="#projects" class="hover:text-gold transition">Projects</a>
-        <a href="#team" class="hover:text-gold transition">Team</a>
-        <a href="#contact" class="hover:text-gold transition">Contact</a>
-      </nav>
-      <button id="mobileMenuToggle" class="md:hidden text-gold text-xl">
-        <i class="fas fa-bars"></i>
-      </button>
+  <header id="mainHeader" class="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 transition-all duration-300 -translate-y-full">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    
+    <!-- Logo -->
+    <div class="flex items-center space-x-3">
+      <img src="https://i.ibb.co/JVFMT0w/LOGO-08-10-1.png" alt="MOTIONTAPE Logo" class="w-12 h-12 object-contain">
     </div>
-    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
-      <a href="#hero" class="block py-2">Home</a>
-      <a href="#about" class="block py-2">About</a>
-      <a href="#services" class="block py-2">Services</a>
-      <a href="#projects" class="block py-2">Projects</a>
-      <a href="#team" class="block py-2">Team</a>
-      <a href="#contact" class="block py-2">Contact</a>
-    </div>
-  </header>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex space-x-6 text-sm">
+      <a href="#hero" class="hover:text-gold transition">Home</a>
+      <a href="#about" class="hover:text-gold transition">About</a>
+      <a href="#services" class="hover:text-gold transition">Services</a>
+      <a href="#projects" class="hover:text-gold transition">Projects</a>
+      <a href="#team" class="hover:text-gold transition">Team</a>
+      <a href="#contact" class="hover:text-gold transition">Contact</a>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <button id="mobileMenuToggle" class="md:hidden text-gold text-xl">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Nav Menu -->
+  <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+    <a href="#hero" class="block py-2">Home</a>
+    <a href="#about" class="block py-2">About</a>
+    <a href="#services" class="block py-2">Services</a>
+    <a href="#projects" class="block py-2">Projects</a>
+    <a href="#team" class="block py-2">Team</a>
+    <a href="#contact" class="block py-2">Contact</a>
+  </div>
+</header>
+<script>
+  // Show/hide header on scroll
+  let lastScrollY = window.scrollY;
+  const header = document.getElementById("mainHeader");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100 && window.scrollY > lastScrollY) {
+      header.classList.remove("-translate-y-full");
+    } else if (window.scrollY < lastScrollY) {
+      header.classList.add("-translate-y-full");
+    }
+    lastScrollY = window.scrollY;
+  });
+
+  // Mobile menu toggle
+  const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  mobileMenuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
 
   <!-- Hero -->
   <!-- Add in <head> -->
@@ -189,16 +215,18 @@
   <!-- Services -->
   <section id="services" class="py-24 px-6 bg-gray-950 text-center fade-up">
   <div class="max-w-6xl mx-auto">
-    <h3 class="text-4xl md:text-5xl font-bold text-gold mb-16 tracking-wide">Our Services</h3>
+    <h3 class="text-4xl md:text-5xl font-bold text-gold mb-16 tracking-wide"> What We Do</h3>
     
     <div class="grid gap-10 md:grid-cols-3">
 
       <!-- Service Card 1: Photography -->
       <div class="bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300">
         <img src="https://i.ibb.co/BHPbLBNk/Into-stunning-visuals-that-tell-your-story-Book-your-sessions-For-Enquires-91-90721-9.jpg" alt="Photography" class="rounded-xl mb-4 w-full h-48 object-cover">
-        <h4 class="text-2xl font-semibold text-white mb-2">Photography</h4>
+        <h4 class="text-2xl font-semibold text-white mb-2">Pre-Production</h4>
         <p class="text-gray-400 leading-relaxed">
-          Portraits, events, product shoots & lifestyle photography crafted for depth and elegance.
+          Concept refracting & story distillation and 
+          Visual experiment workshops
+
         </p>
        
       </div>
@@ -206,18 +234,18 @@
       <!-- Service Card 2: Videography -->
       <div class="bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300">
         <img src="https://i.ibb.co/KzLNT6Wp/With-stunning-details-and-cinematic-quality-For-Enquires-91-90721-91616-hello-motio.jpg" alt="Videography" class="rounded-xl mb-4 w-full h-48 object-cover">
-        <h4 class="text-2xl font-semibold text-white mb-2">Videography</h4>
+        <h4 class="text-2xl font-semibold text-white mb-2">Production</h4>
         <p class="text-gray-400 leading-relaxed">
-          Stylized video production for commercials, reels, music videos & brand stories.
+           Cinematic capture with optical-spectrum bending  and On-set distortion & dynamic light design
         </p>
       </div>
 
       <!-- Service Card 3: Creative Direction -->
       <div class="bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300">
         <img src="https://i.ibb.co/35rC3GPf/We-create-content-that-resonates-For-Enquires-91-90721-91616-hello-motiontape-in.jpg" alt="Social Media Content" class="rounded-xl mb-4 w-full h-48 object-cover">
-        <h4 class="text-2xl font-semibold text-white mb-2">Social Media Content</h4>
+        <h4 class="text-2xl font-semibold text-white mb-2">Post-Production</h4>
         <p class="text-gray-400 leading-relaxed">
-         We Create engaging content for Your Business Social Media
+         Twist, transform, reconstruct footage and  Sonic branding & spatial sound design
         </p>
       </div>
 
@@ -503,10 +531,12 @@
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
   </script>
-   
+<!-- Preloader 
 <script>
 (function(){document.write('<div id="preloader" style="position:fixed;inset:0;z-index:9999;background:#000;color:#d4af37;display:flex;align-items:center;justify-content:center;flex-direction:column;font-family:sans-serif;font-size:24px;transition:opacity 0.5s ease"><div id="loader-text">Loading... 1</div></div>');let count=1,redirected=false;function go404(){if(!redirected){redirected=true;window.location.href="/404.html"}}if(!navigator.onLine){go404()}else{let timeout=setTimeout(go404,8000);let interval=setInterval(()=>{count++;if(count<=10){document.getElementById("loader-text").innerText="Loading... "+count}else{clearInterval(interval)}},300);window.addEventListener("load",()=>{clearTimeout(timeout);redirected=true;document.getElementById("preloader").style.opacity="0";setTimeout(()=>{document.getElementById("preloader").style.display="none"},500)})}})();
 </script>
+-->
+  
 </body>
 </html>
 

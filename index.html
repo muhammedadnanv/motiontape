@@ -346,100 +346,95 @@
   </div>
 </section>
 
-<section id="team" class="relative bg-gray-950 py-24 px-6 text-center">
+  <!-- Team -->
+   <section id="team" class="relative bg-gray-950 py-24 px-4 text-center">
   <div class="max-w-6xl mx-auto">
     <h3 class="text-4xl md:text-5xl font-bold text-gold mb-16 tracking-wide">the crew</h3>
 
-    <!-- Scroll Buttons -->
     <div class="relative">
+      <!-- Scroll Buttons -->
       <button
         onclick="scrollTeam('left')"
-        class="hidden md:flex items-center justify-center absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gold text-black w-10 h-10 rounded-full shadow-md hover:bg-gold/90 transition"
+        class="flex items-center justify-center absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gold text-black w-10 h-10 rounded-full shadow-md hover:bg-gold/90 transition"
       >
         ←
       </button>
       <button
         onclick="scrollTeam('right')"
-        class="hidden md:flex items-center justify-center absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gold text-black w-10 h-10 rounded-full shadow-md hover:bg-gold/90 transition"
+        class="flex items-center justify-center absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gold text-black w-10 h-10 rounded-full shadow-md hover:bg-gold/90 transition"
       >
         →
       </button>
 
-      <!-- Scrollable Cards -->
+      <!-- Team Cards (Scroll only via JS) -->
       <div
         id="team-scroll"
-        class="flex overflow-x-auto gap-6 snap-x snap-mandatory pb-4 px-2 scroll-smooth scrollbar-thin scrollbar-thumb-gold scrollbar-track-gray-800"
+        class="flex gap-6 snap-x snap-mandatory pb-4 px-2 scroll-smooth overflow-hidden"
+        style="scrollbar-width: none; -ms-overflow-style: none;"
       >
-
-        <!-- Member Card 1 -->
+        <!-- Member Card Example -->
         <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
           <img src="https://i.ibb.co/cKLXTmYH/909090.png" alt="Jenith Kachapally" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
-          <h4 class="text-2xl font-semibold text-white mb-1">Jenith Kachapally</h4>
-          <p class="text-gray-400 text-sm mb-4">Director</p>
-          <a href="https://www.imdb.com/name/nm10143417/" target="_blank" class="text-gold hover:underline">Visit Profile</a>
+          <h4 class="text-2xl font-semibold text-white mb-1">jenith Kachapally</h4>
+          <p class="text-gray-400 text-sm mb-4">director</p>
+          <a href="https://www.imdb.com/name/nm10143417/" target="_blank" class="text-gold hover:underline">visit profile</a>
         </div>
-
-        <!-- Member Card 2 -->
+         
         <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
           <img src="https://i.ibb.co/rggkv1N/67890987654.jpg" alt="Anand Menon" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
-          <h4 class="text-2xl font-semibold text-white mb-1">Anand Menon</h4>
-          <p class="text-gray-400 text-sm mb-4">Director</p>
-          <a href="https://www.imdb.com/name/nm11241276/" target="_blank" class="text-gold hover:underline">Visit Profile</a>
+          <h4 class="text-2xl font-semibold text-white mb-1">anand Menon</h4>
+          <p class="text-gray-400 text-sm mb-4">director</p>
+          <a href="https://www.imdb.com/name/nm11241276/" target="_blank" class="text-gold hover:underline">visit profile</a>
         </div>
 
-        <!-- Member Card 3 -->
         <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
           <img src="https://i.ibb.co/QRjBtM9/tgyutr.jpg" alt="Anu Muthedath" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
-          <h4 class="text-2xl font-semibold text-white mb-1">Anu Muthedath</h4>
-          <p class="text-gray-400 text-sm mb-4">DOP</p>
-          <a href="https://www.imdb.com/name/nm6358536/" target="_blank" class="text-gold hover:underline">Visit Profile</a>
+          <h4 class="text-2xl font-semibold text-white mb-1">anu muthedath</h4>
+          <p class="text-gray-400 text-sm mb-4">dop</p>
+          <a href="https://www.imdb.com/name/nm10143417/" target="_blank" class="text-gold hover:underline">visit profile</a>
         </div>
 
-        <!-- Member Card 4 -->
         <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
-          <img src="https://i.ibb.co/PzcGF8y3/Rohith-VS.jpg" alt="Rohith VS" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
-          <h4 class="text-2xl font-semibold text-white mb-1">Rohith VS</h4>
-          <p class="text-gray-400 text-sm mb-4">Editor</p>
-          <a href="https://www.imdb.com/name/nm7909553/" target="_blank" class="text-gold hover:underline">Visit Profile</a>
+          <img src="https://i.ibb.co/pvh3yCv7/0909.png" alt="rohith vs" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
+          <h4 class="text-2xl font-semibold text-white mb-1">rohith vs</h4>
+          <p class="text-gray-400 text-sm mb-4">editor</p>
+          <a href="https://www.imdb.com/name/nm7909553/" target="_blank" class="text-gold hover:underline">visit profile</a>
         </div>
 
-        <!-- Member Card 5 -->
         <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
-          <img src="https://i.ibb.co/pjWrPj0H/cinema-instamood-love.jpg" alt="Dhanya Balakrishnan" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
-          <h4 class="text-2xl font-semibold text-white mb-1">Dhanya Balakrishnan</h4>
-          <p class="text-gray-400 text-sm mb-4">Costume</p>
-          <a href="https://www.imdb.com/name/nm4758002/" target="_blank" class="text-gold hover:underline">Visit Profile</a>
+          <img src="https://i.ibb.co/933m3ztS/gfdd.png" alt="rohith vs" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
+          <h4 class="text-2xl font-semibold text-white mb-1">dhanya balakrishnan</h4>
+          <p class="text-gray-400 text-sm mb-4">custome</p>
+          <a href="https://www.imdb.com/name/nm4758002/" target="_blank" class="text-gold hover:underline">visit profile</a>
         </div>
-
-        <!-- Member Card 6 -->
+    
         <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
-          <img src="https://i.ibb.co/GLS5pd3/Ronex-Xavier.jpg" alt="Ronex Xavier" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
+          <img src="https://i.ibb.co/fd5WBVBb/Whats-App-Image-2025-08-05-at-3-37-37-PM-copy.png" alt="rohith vs" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
           <h4 class="text-2xl font-semibold text-white mb-1">Ronex Xavier</h4>
-          <p class="text-gray-400 text-sm mb-4">Makeup</p>
-          <a href="https://www.imdb.com/name/nm5205291/" target="_blank" class="text-gold hover:underline">Visit Profile</a>
-        </div>
+          <p class="text-gray-400 text-sm mb-4">makeup</p>
+          <a href="https://www.imdb.com/name/nm4758002/" target="_blank" class="text-gold hover:underline">visit profile</a>
 
-        <!-- Member Card 7 -->
+        </div>
         <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
-          <img src="https://i.ibb.co/JjkJ065G/Anees-Nadodi.jpg" alt="Anees Nadodi" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
-          <h4 class="text-2xl font-semibold text-white mb-1">Anees Nadodi</h4>
-          <p class="text-gray-400 text-sm mb-4">Art</p>
-          <a href="https://www.imdb.com/name/nm9386233/" target="_blank" class="text-gold hover:underline">Visit Profile</a>
-        </div>
-
-        <!-- Member Card 8 -->
-        <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
-          <img src="https://i.ibb.co/0jFnS5pr/promice.png" alt="Promice Studios" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
-          <h4 class="text-2xl font-semibold text-white mb-1">Promice Studios</h4>
-          <p class="text-gray-400 text-sm mb-4">VFX</p>
-          <a href="https://www.youtube.com/@promicevfx" target="_blank" class="text-gold hover:underline">Visit Profile</a>
-        </div>
-
+          <img src="https://i.ibb.co/TxvyzbnS/poj.png" alt="rohith vs" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
+          <h4 class="text-2xl font-semibold text-white mb-1">anees nadodi</h4>
+          <p class="text-gray-400 text-sm mb-4">art</p>
+          <a href="https://www.imdb.com/name/nm4758002/" target="_blank" class="text-gold hover:underline">visit profile</a>
+          </div>
+         <!--
+           <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
+          <img src="https://i.ibb.co/5x1f3b7S/Whats-App-Image-2025-08-05-at-3-37-37-PM-copy.png" alt="rohith vs" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
+          <h4 class="text-2xl font-semibold text-white mb-1">anees nadodi</h4>
+          <p class="text-gray-400 text-sm mb-4">art</p>
+          <a href="https://www.imdb.com/name/nm4758002/" target="_blank" class="text-gold hover:underline">visit profile</a>
+          </div>
+        -->
+        <!-- Repeat other cards here as needed -->
       </div>
     </div>
   </div>
 
-  <!-- Scroll JavaScript -->
+  <!-- JS to scroll -->
   <script>
     function scrollTeam(direction) {
       const container = document.getElementById("team-scroll");
@@ -474,12 +469,12 @@
 
     <!-- Form Column (Right) -->
     <form class="space-y-4 w-full lg:w-1/2">
-      <input id="name" type="text" placeholder="Your Name" class="w-full p-3 bg-gray-800 border border-gold rounded" />
-      <input id="business" type="text" placeholder="Business Name" class="w-full p-3 bg-gray-800 border border-gold rounded" />
-      <input id="phone" type="tel" placeholder="Phone Number" class="w-full p-3 bg-gray-800 border border-gold rounded" />
-      <input id="email" type="email" placeholder="Email Address" class="w-full p-3 bg-gray-800 border border-gold rounded" />
-      <textarea id="requirements" placeholder="Your Requirements" class="w-full p-3 bg-gray-800 border border-gold rounded"></textarea>
-      <input id="location" type="text" placeholder="Your Location" class="w-full p-3 bg-gray-800 border border-gold rounded" />
+      <input id="name" type="text" placeholder="your name" class="w-full p-3 bg-gray-800 border border-gold rounded" />
+      <input id="business" type="text" placeholder="business name" class="w-full p-3 bg-gray-800 border border-gold rounded" />
+      <input id="phone" type="tel" placeholder="phone number" class="w-full p-3 bg-gray-800 border border-gold rounded" />
+      <input id="email" type="email" placeholder="email address" class="w-full p-3 bg-gray-800 border border-gold rounded" />
+      <textarea id="requirements" placeholder="your requirements" class="w-full p-3 bg-gray-800 border border-gold rounded"></textarea>
+      <input id="location" type="text" placeholder="your location" class="w-full p-3 bg-gray-800 border border-gold rounded" />
       <button type="button" onclick="sendToWhatsApp()" class="bg-gold text-black font-bold px-6 py-3 rounded hover:opacity-90 transition">
         Summit
       </button>

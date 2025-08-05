@@ -210,9 +210,9 @@
 
     <!-- Text Right -->
     <div>
-      <h3 class="text-4xl md:text-5xl font-bold text-gold mb-6 tracking-wide">About Us</h3>
+      <h3 class="text-4xl md:text-5xl font-bold text-gold mb-6 tracking-wide">about us</h3>
       <p class="text-lg md:text-xl text-gray-400 leading-relaxed">
-        We are a passionate team of storytellers blending art and technology to craft timeless visual experiences. Whether it’s candid moments or cinematic edits, we bring your vision to life with unmatched creativity.
+        we are a passionate team of storytellers blending art and technology to craft timeless visual experiences. Whether it’s candid moments or cinematic edits, we bring your vision to life with unmatched creativity.
       </p>
     </div>
 
@@ -224,17 +224,17 @@
   <!-- Services -->
   <section id="services" class="py-24 px-6 bg-gray-950 text-center fade-up">
   <div class="max-w-6xl mx-auto">
-    <h3 class="text-4xl md:text-5xl font-bold text-gold mb-16 tracking-wide"> What We Do</h3>
+    <h3 class="text-4xl md:text-5xl font-bold text-gold mb-16 tracking-wide">  we do</h3>
     
     <div class="grid gap-10 md:grid-cols-3">
 
       <!-- Service Card 1: Photography -->
       <div class="bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300">
         <img src="https://i.ibb.co/tTRcfYM6/Whats-App-Image-2025-08-05-at-16-12-44.jpg" alt="Photography" class="rounded-xl mb-4 w-full h-48 object-cover">
-        <h4 class="text-2xl font-semibold text-white mb-2">Pre-Production</h4>
+        <h4 class="text-2xl font-semibold text-white mb-2">pre-production</h4>
         <p class="text-gray-400 leading-relaxed">
-          Concept refracting & story distillation and 
-          Visual experiment workshops
+          concept refracting & story distillation and
+          visual experiment workshops
 
         </p>
        
@@ -243,18 +243,18 @@
       <!-- Service Card 2: Videography -->
       <div class="bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300">
         <img src="https://i.ibb.co/DDCBXgy6/Whats-App-Image-2025-08-05-at-16-12-44-1.jpg" alt="Videography" class="rounded-xl mb-4 w-full h-48 object-cover">
-        <h4 class="text-2xl font-semibold text-white mb-2">Production</h4>
+        <h4 class="text-2xl font-semibold text-white mb-2">production</h4>
         <p class="text-gray-400 leading-relaxed">
-           Cinematic capture with optical-spectrum bending  and On-set distortion & dynamic light design
+           cinematic capture with optical-spectrum bending  and On-set distortion & dynamic light design
         </p>
       </div>
 
       <!-- Service Card 3: Creative Direction -->
       <div class="bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300">
         <img src="https://i.ibb.co/21F3q9gs/Whats-App-Image-2025-08-05-at-16-12-44-2.jpg" alt="Social Media Content" class="rounded-xl mb-4 w-full h-48 object-cover">
-        <h4 class="text-2xl font-semibold text-white mb-2">Post-Production</h4>
+        <h4 class="text-2xl font-semibold text-white mb-2">post-production</h4>
         <p class="text-gray-400 leading-relaxed">
-         Twist, transform, reconstruct footage and  Sonic branding & spatial sound design
+         twist, transform, reconstruct footage and  sonic branding & spatial sound design
         </p>
       </div>
 
@@ -280,7 +280,7 @@
 </style>
 
 <section id="projects" class="py-20 px-6 text-center bg-black text-white">
-  <h3 class="text-3xl md:text-4xl font-semibold text-gold mb-12">Our Projects</h3>
+  <h3 class="text-3xl md:text-4xl font-semibold text-gold mb-12">our projects</h3>
 
   <div class="overflow-hidden relative max-w-7xl mx-auto">
     <div class="flex w-[200%] animate-slide-cards space-x-8">
@@ -346,8 +346,8 @@
   </div>
 </section>
 
-  <!-- Team -->
-   <section id="team" class="relative bg-gray-950 py-24 px-4 text-center">
+<!-- Team -->
+ <section id="team" class="relative bg-gray-950 py-24 px-4 text-center">
   <div class="max-w-6xl mx-auto">
     <h3 class="text-4xl md:text-5xl font-bold text-gold mb-16 tracking-wide">the crew</h3>
 
@@ -355,31 +355,33 @@
       <!-- Scroll Buttons -->
       <button
         onclick="scrollTeam('left')"
-        class="flex items-center justify-center absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gold text-black w-10 h-10 rounded-full shadow-md hover:bg-gold/90 transition"
+        class="hidden md:flex items-center justify-center absolute -left-6 top-1/2 -translate-y-1/2 z-10 bg-gold text-black w-10 h-10 rounded-full shadow-md hover:bg-gold/90 transition"
       >
         ←
       </button>
       <button
         onclick="scrollTeam('right')"
-        class="flex items-center justify-center absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gold text-black w-10 h-10 rounded-full shadow-md hover:bg-gold/90 transition"
+        class="hidden md:flex items-center justify-center absolute -right-6 top-1/2 -translate-y-1/2 z-10 bg-gold text-black w-10 h-10 rounded-full shadow-md hover:bg-gold/90 transition"
       >
         →
       </button>
 
-      <!-- Team Cards (Scroll only via JS) -->
+      <!-- Team Cards Scroll Area -->
       <div
         id="team-scroll"
-        class="flex gap-6 snap-x snap-mandatory pb-4 px-2 scroll-smooth overflow-hidden"
-        style="scrollbar-width: none; -ms-overflow-style: none;"
+        class="flex gap-6 snap-x snap-mandatory pb-4 px-2 scroll-smooth overflow-x-auto overflow-y-hidden scrollbar-hide"
+        style="-ms-overflow-style: none; scrollbar-width: none;"
       >
-        <!-- Member Card Example -->
+
+        <!-- 1 -->
         <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
           <img src="https://i.ibb.co/cKLXTmYH/909090.png" alt="Jenith Kachapally" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
           <h4 class="text-2xl font-semibold text-white mb-1">jenith Kachapally</h4>
           <p class="text-gray-400 text-sm mb-4">director</p>
           <a href="https://www.imdb.com/name/nm10143417/" target="_blank" class="text-gold hover:underline">visit profile</a>
         </div>
-         
+
+        <!-- 2 -->
         <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
           <img src="https://i.ibb.co/rggkv1N/67890987654.jpg" alt="Anand Menon" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
           <h4 class="text-2xl font-semibold text-white mb-1">anand Menon</h4>
@@ -387,6 +389,7 @@
           <a href="https://www.imdb.com/name/nm11241276/" target="_blank" class="text-gold hover:underline">visit profile</a>
         </div>
 
+        <!-- 3 -->
         <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
           <img src="https://i.ibb.co/QRjBtM9/tgyutr.jpg" alt="Anu Muthedath" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
           <h4 class="text-2xl font-semibold text-white mb-1">anu muthedath</h4>
@@ -394,6 +397,7 @@
           <a href="https://www.imdb.com/name/nm10143417/" target="_blank" class="text-gold hover:underline">visit profile</a>
         </div>
 
+        <!-- 4 -->
         <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
           <img src="https://i.ibb.co/pvh3yCv7/0909.png" alt="rohith vs" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
           <h4 class="text-2xl font-semibold text-white mb-1">rohith vs</h4>
@@ -401,40 +405,35 @@
           <a href="https://www.imdb.com/name/nm7909553/" target="_blank" class="text-gold hover:underline">visit profile</a>
         </div>
 
+        <!-- 5 -->
         <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
-          <img src="https://i.ibb.co/933m3ztS/gfdd.png" alt="rohith vs" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
+          <img src="https://i.ibb.co/933m3ztS/gfdd.png" alt="dhanya balakrishnan" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
           <h4 class="text-2xl font-semibold text-white mb-1">dhanya balakrishnan</h4>
           <p class="text-gray-400 text-sm mb-4">custome</p>
           <a href="https://www.imdb.com/name/nm4758002/" target="_blank" class="text-gold hover:underline">visit profile</a>
         </div>
-    
+
+        <!-- 6 -->
         <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
-          <img src="https://i.ibb.co/fd5WBVBb/Whats-App-Image-2025-08-05-at-3-37-37-PM-copy.png" alt="rohith vs" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
+          <img src="https://i.ibb.co/fd5WBVBb/Whats-App-Image-2025-08-05-at-3-37-37-PM-copy.png" alt="Ronex Xavier" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
           <h4 class="text-2xl font-semibold text-white mb-1">Ronex Xavier</h4>
           <p class="text-gray-400 text-sm mb-4">makeup</p>
           <a href="https://www.imdb.com/name/nm5205291/?ref_=fn_all_nme_1" target="_blank" class="text-gold hover:underline">visit profile</a>
-
         </div>
+
+        <!-- 7 -->
         <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
-          <img src="https://i.ibb.co/TxvyzbnS/poj.png" alt="rohith vs" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
+          <img src="https://i.ibb.co/TxvyzbnS/poj.png" alt="anees nadodi" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
           <h4 class="text-2xl font-semibold text-white mb-1">anees nadodi</h4>
           <p class="text-gray-400 text-sm mb-4">art</p>
           <a href="https://www.imdb.com/name/nm9386233/?ref_=fn_all_nme_1" target="_blank" class="text-gold hover:underline">visit profile</a>
-          </div>
-         <!--
-           <div class="min-w-[280px] bg-gray-900 p-6 rounded-2xl shadow-lg border border-gray-800 hover:border-gold transition-all duration-300 snap-start">
-          <img src="https://i.ibb.co/5x1f3b7S/Whats-App-Image-2025-08-05-at-3-37-37-PM-copy.png" alt="rohith vs" class="w-40 h-40 rounded-full mx-auto mb-4 object-cover shadow-md" />
-          <h4 class="text-2xl font-semibold text-white mb-1">anees nadodi</h4>
-          <p class="text-gray-400 text-sm mb-4">art</p>
-          <a href="https://www.imdb.com/name/nm4758002/" target="_blank" class="text-gold hover:underline">visit profile</a>
-          </div>
-        -->
-        <!-- Repeat other cards here as needed -->
+        </div>
+
       </div>
     </div>
   </div>
 
-  <!-- JS to scroll -->
+  <!-- Scroll Script -->
   <script>
     function scrollTeam(direction) {
       const container = document.getElementById("team-scroll");
@@ -445,10 +444,14 @@
       });
     }
   </script>
+
+  <!-- Hide scrollbar for WebKit -->
+  <style>
+    #team-scroll::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
 </section>
-
-
- 
 
 
   <!-- Contact -->
@@ -483,7 +486,7 @@
   </div>
 </section>
 <section id="follow-us" class="py-16 px-6 bg-black text-white text-center">
-  <h3 class="text-3xl font-semibold text-gold mb-6">Follow Us</h3>
+  <h3 class="text-3xl font-semibold text-gold mb-6">follow us</h3>
 
   <div class="flex justify-center space-x-6 mt-4">
     <!-- Facebook -->
@@ -518,8 +521,8 @@
   <!-- Footer -->
   <footer class="bg-black py-10">
     <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-      <p>&copy; 2025 MOTIONTAPE. All rights reserved.</p>
-      <a href="https://lagger.com" class="hover:text-gold transition">Lagger Technologies</a>
+      <p>&copy; 2025 motiontape. all rights reserved.</p>
+      <a href="https://lagger.com" class="hover:text-gold transition">lagger Technologies</a>
     </div>
   </footer>
 
